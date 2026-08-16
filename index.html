@@ -324,6 +324,16 @@ h2.sec-title em { font-style: italic; font-weight: 600; background: linear-gradi
 .mini .adr-lines { position: absolute; left: 18px; right: 18px; bottom: 12px; display: flex; flex-direction: column; gap: 5px; }
 .mini .adr-lines span { height: 4px; border-radius: 3px; background: rgba(212,198,178,.4); }
 .mini .adr-lines span.w { width: 55%; background: var(--ma); }
+/* construction mockup */
+.mini .con { position: absolute; inset: 0; }
+.mini .con-bldg { position: absolute; right: 8%; bottom: 10px; width: 36%; height: 62%; display: flex; align-items: flex-end; gap: 2px; }
+.mini .con-bldg b { flex: 1; background: linear-gradient(180deg, #2c2c36, #1f1f27); border: 1px solid rgba(212,198,178,.12); }
+.mini .con-bldg b.f { background: linear-gradient(180deg, #e3b368, #7a5a24); border-color: rgba(227,179,104,.45); }
+.mini .con-crane { position: absolute; left: 14px; bottom: 10px; width: 2px; height: 66%; background: linear-gradient(180deg, #e3b368, #8a6d3b); }
+.mini .con-crane i { position: absolute; left: 2px; top: -2px; width: 58px; height: 2px; background: linear-gradient(90deg, #e3b368, #8a6d3b); transform-origin: left center; transform: rotate(-10deg); }
+.mini .con-crane em { position: absolute; left: 55px; top: -2px; width: 1px; height: 42px; background: rgba(212,198,178,.55); }
+.mini .con-crane .hook { position: absolute; left: 46px; top: 38px; width: 17px; height: 3px; border-radius: 2px; background: #c9a35e; }
+.mini .con-tag { position: absolute; left: 16px; top: 14px; font-size: 8px; font-weight: 800; letter-spacing: .22em; color: rgba(212,198,178,.6); }
 /* unified card mockups — one palette across the work grid */
 .work-card .mini { background: linear-gradient(150deg, #17171e, #1e1e27); --ms: rgba(220,205,178,.38); --ma: #c9a35e; --mp: #24242d; }
 .work-card .mini .dashbars em { background: linear-gradient(180deg, #e3b368, #7a5a24); }
@@ -840,6 +850,25 @@ h2.sec-title em { font-style: italic; font-weight: 600; background: linear-gradi
         </div></div>
         <div class="glare"></div>
         <div class="meta"><span class="tag">Dent repair</span><h3>ADR Auto Dent</h3><p>Clean lead-gen site for a dent repair shop</p></div>
+        <span class="zopen">&#8599;</span>
+      </a>
+
+      <a class="work-card reveal" style="animation-delay:.54s" data-demo="construction" href="https://saadwebsites.github.io/construction-master-template/">
+        <span class="znum">10</span>
+        <div class="shot"><div class="inner">
+          <div class="mini p1">
+            <div class="chrome"><i></i><i></i><i></i></div>
+            <div class="con">
+              <div class="con-bldg">
+                <b style="height:26%"></b><b style="height:40%"></b><b style="height:56%"></b><b style="height:72%"></b><b class="f" style="height:90%"></b>
+              </div>
+              <div class="con-crane"><i></i><em></em><span class="hook"></span></div>
+              <div class="con-tag">NORTHGATE BUILD</div>
+            </div>
+          </div>
+        </div></div>
+        <div class="glare"></div>
+        <div class="meta"><span class="tag">Construction</span><h3>Northgate Build Co.</h3><p>Animation-driven site for a general contractor</p></div>
         <span class="zopen">&#8599;</span>
       </a>
     </div>
@@ -1476,7 +1505,8 @@ h2.sec-title em { font-style: italic; font-weight: 600; background: linear-gradi
     { key: 'thread-and-co', name: 'Thread & Co.', tag: 'E-commerce', path: 'thread-and-co/', pal: 'p6' },
     { key: 'crest-and-forge', name: 'Crest & Forge', tag: 'Architecture', path: 'crest-and-forge/', pal: 'p7' },
     { key: 'bloomly', name: 'Bloomly', tag: 'Wellness', path: 'bloomly/', pal: 'p8' },
-    { key: 'auto-dent-repair', name: 'ADR Auto Dent', tag: 'Dent repair', path: 'auto-dent-repair/', pal: 'p1' }
+    { key: 'auto-dent-repair', name: 'ADR Auto Dent', tag: 'Dent repair', path: 'auto-dent-repair/', pal: 'p1' },
+    { key: 'construction', name: 'Northgate Build Co.', tag: 'Construction', path: 'construction-master-template/', pal: 'p1' }
   ];
   var BASE = location.hostname === 'localhost' || location.hostname === '127.0.0.1' ? 'http://localhost:5181/' : 'https://saadwebsites.github.io/';
   for (var di = 0; di < DEMOS.length; di++) DEMOS[di].url = BASE + DEMOS[di].path;
